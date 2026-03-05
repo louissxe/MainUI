@@ -1,0 +1,28 @@
+-- pastikan userKey sudah dibuat sebelum loader dijalankan
+if not userKey or userKey == "" then
+    warn("No key provided!")
+    return
+end
+
+-- Setup Junkie
+JunkieProtected.API_KEY = "6578dd0b-f964-4fbd-b2bb-b467890ec538"
+JunkieProtected.PROVIDER = "Louissxe"
+JunkieProtected.SERVICE_ID = "Louis"
+
+-- Validasi
+local result = JunkieProtected.ValidateKey({ Key = userKey })
+
+if result == "valid" then
+    print("Key valid! Loading main script...")
+
+    -- 🔥 MAIN SCRIPT
+    print("hello world")
+else
+    warn("Invalid key!")
+    local keyLink = JunkieProtected.GetKeyLink()
+
+    if setclipboard then
+        setclipboard(keyLink)
+        print("Key link copied!")
+    end
+end

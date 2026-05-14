@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/louissxe/MainUI/refs/heads/main/tests/tempo.lua"))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/louissxe/Lua/refs/heads/main/LuxvS.lua'))() 
